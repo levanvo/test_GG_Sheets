@@ -11,9 +11,11 @@ function App() {
   const onFinish = async (values) => {
     console.log('Success:', values);
     await instance.post(`/write`, values);
-    setTimeout(()=>{
-      form.resetFields();
-    },1000);
+    // setTimeout(()=>{
+    //   form.resetFields();
+    // },1000);
+    alert("Convert success !!");
+    window.location.reload();
     const show=()=>{
       set.success("Successful !");
     };
